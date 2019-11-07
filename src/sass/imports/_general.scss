@@ -39,7 +39,7 @@ h4,
 h5,
 h6 {
   color: _palette(secondary);
-  font-weight: bold;
+  font-weight: 900;
   line-height: 1.2;
   margin: 1.66667rem 0 0.83333rem;
   text-rendering: optimizeLegibility;
@@ -144,7 +144,7 @@ blockquote {
     display: block;
     font-size: 0.5em;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.66667;
     margin-top: 1em;
 
@@ -159,7 +159,7 @@ dl {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 dd {
@@ -208,18 +208,18 @@ td {
 
 th {
   color: _palette(secondary);
-  font-weight: bold;
+  font-weight: 900;
 }
 
 /* Form fields */
 label {
   color: _palette(secondary);
-  font-weight: bold;
+  font-weight: 900;
 }
 
 label > span {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 input[type=checkbox]+label,
@@ -245,7 +245,7 @@ textarea {
   color: _palette(primary);
   display: inline-block;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.5;
   max-width: 100%;
   padding: 0.5em 10px;
