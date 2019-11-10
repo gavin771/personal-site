@@ -259,3 +259,89 @@
     }
   }
 }
+
+.palette-red {
+  a {
+    border-color: _palette(accent-red);
+
+    &:hover {
+      border-color: currentColor;
+    }
+  }
+
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  a.button {
+    background: _palette(accent-red);
+    border-color: _palette(accent-red);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: 0;
+      box-shadow: 0 0 1px 7px rgba(_palette(accent-red),.2);
+    }
+  }
+
+  a.button.circle {
+    background: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: _palette(accent-red);
+    }
+  }
+
+  .underline {
+    &:after {
+      border-color: _palette(accent-red);
+    }
+  }
+
+  .profile {
+    .avatar {
+      border-color: _palette(accent-red);
+      box-shadow: 0 0 1px 7px rgba(_palette(accent-red),.2);
+
+      @media only screen and (min-width: 801px) {
+        box-shadow: 0 0 1px 11px rgba(_palette(accent-red),.2);
+      }
+    }
+  }
+
+  .menu-item a:hover,
+  .current-menu-item a {
+    color: _palette(accent-red);
+  }
+
+  .social-links {
+    a {
+      border-color: _palette(border);
+
+      &:hover {
+        background: _palette(accent-red);
+        border-color: _palette(accent-red);
+        box-shadow: 0 0 1px 5px rgba(_palette(accent-red),.2);
+      }
+    }
+  }
+
+  .dark .social-links {
+    a {
+      border-color: _palette(primary);
+
+      &:hover {
+        border-color: _palette(accent-red);
+      }
+    }
+  }
+
+  .post-title {
+    a:hover {
+      color: _palette(accent-red);
+    }
+  }
+}
