@@ -39,7 +39,7 @@ h4,
 h5,
 h6 {
   color: _palette(secondary);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   margin: 1.66667rem 0 0.83333rem;
   text-rendering: optimizeLegibility;
@@ -159,7 +159,7 @@ dl {
 }
 
 dt {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 dd {
@@ -208,13 +208,13 @@ td {
 
 th {
   color: _palette(secondary);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* Form fields */
 label {
   color: _palette(secondary);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 label > span {
