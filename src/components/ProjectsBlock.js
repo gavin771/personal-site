@@ -7,12 +7,12 @@ import { getPages, Link, safePrefix } from "../utils";
 export default class ProjectsBlock extends React.Component {
   render() {
     let display_projects = _.get(this.props, "pageContext.projects");
-    let recent_projects = display_projects.slice(
-      0,
-      _.get(this.props, "section.num_projects_displayed")
-    );
+    // let recent_projects = display_projects.slice(
+    //   0,
+    //   _.get(this.props, "section.num_projects_displayed")
+    // );
     console.log(display_projects);
-    console.log(recent_projects);
+    console.log(_.get(this.props, "section.num_projects_displayed"));
     return (
       <section></section>
       // <section id={_.get(this.props, 'section.section_id')} className="block">
