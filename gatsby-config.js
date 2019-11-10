@@ -62,6 +62,7 @@ module.exports = {
             //   sampleRate: 5,
             //   siteSpeedSampleRate: 10,
             //   cookieDomain: "example.com",
-            },
+            }
+        }
     ]
 };
