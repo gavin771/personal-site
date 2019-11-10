@@ -12,7 +12,7 @@ export default class ProjectsBlock extends React.Component {
     //   _.get(this.props, "section.num_projects_displayed")
     // );
     console.log(display_projects);
-    console.log(recent_projects);
+    console.log(_.get(this.props, "section"));
     return (
       <section></section>
       // <section id={_.get(this.props, 'section.section_id')} className="block">
