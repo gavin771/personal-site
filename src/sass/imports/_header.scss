@@ -123,11 +123,13 @@
 
 .menu-item {
   border-top: 1px solid _palette(border);
-  padding: 0.5em 0;
+  // padding: 0.5em 0;
 
   a {
     border: 0;
     color: inherit;
+    padding: 0.5em 0;
+    display: block;
   }
 }
 
