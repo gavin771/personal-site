@@ -173,6 +173,7 @@
     flex-grow: 1;
     font-size: 14px;
     padding: 0 1.33333rem;
+    margin-bottom: 15px;
   }
 
   .post-meta {
@@ -284,4 +285,12 @@
 
 .block-cta .button {
   margin-right: 15px;
+}
+
+.project-tag {
+  background: _palette(accent);
+  font-size: 12px;
+  color: #fff;
+  margin-right: 10px;
+  padding: 3px 5px;
 }
