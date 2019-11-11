@@ -1,8 +1,7 @@
 import React from "react";
 import _ from "lodash";
-import moment from "moment-strftime";
 
-import { getPages, Link, safePrefix } from "../utils";
+import { Link, safePrefix } from "../utils";
 
 export default class ProjectsBlock extends React.Component {
   render() {

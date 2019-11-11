@@ -48,8 +48,29 @@
   text-transform: uppercase;
 }
 
+.project-meta {
+  display: flex;
+  justify-content: center;
+}
+.project-meta a:nth-child(1) {
+  border-right: 1px solid #fff !important;
+}
+.project-meta a.button {
+  flex: 1;
+  font-size: 12px;
+  background: _palette(primary);
+  border: 2px solid _palette(primary) !important;
+  text-align: center;
+
+  &:hover {
+    box-shadow: none !important;
+    background: 0;
+  }
+}
+
 /* Post feed */
-.post-feed {
+.post-feed,
+.project-feed {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -58,7 +79,8 @@
   flex-wrap: wrap;
   margin: 0 -0.83333em 1.66667em;
 
-  .post {
+  .post,
+  .project {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -69,6 +91,12 @@
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 1.66667em;
+  }
+
+  .project {
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
   }
 
   .post-inside {
@@ -142,11 +170,13 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .post-feed {
+  .post-feed,
+  .project-feed {
     margin-left: -1.5vw;
     margin-right: -1.5vw;
 
-    .post {
+    .post,
+    .project {
       margin-bottom: 3vw;
     }
 
@@ -157,8 +187,10 @@
   }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1000px), only screen and (max-width: 600px) {
-.post-feed .post {
+@media only screen and (min-width: 801px) and (max-width: 1000px),
+  only screen and (max-width: 600px) {
+  .post-feed .post,
+  .project-feed .project {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
