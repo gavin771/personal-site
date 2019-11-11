@@ -14,7 +14,6 @@ export default class ProjectsBlock extends React.Component {
       0,
       _.get(this.props, "section.num_projects_displayed")
     );
-    console.log(recent_projects);
     return (
       <section id={_.get(this.props, "section.section_id")} className="block">
         <h2 className="block-title underline">
