@@ -61,13 +61,16 @@
   text-align: center;
 
   &:hover {
-    box-shadow: none !important !important;
-    background: 0;
+    box-shadow: none !important;
+    background: 0 !important;
   }
 }
 
 .project-meta a:nth-child(1) {
   border-right: 1px solid #fff !important;
+}
+.project-meta a:nth-child(2) {
+  border-left: 1px solid #fff !important;
 }
 
 /* Post feed */
