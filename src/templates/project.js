@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import ReactTooltip from "react-tooltip";
 
 import { Layout } from "../components/index";
 import { htmlToReact, Link, safePrefix } from "../utils";
@@ -25,9 +26,12 @@ export default class Project extends React.Component {
           </div>
         )}
         <div className="project-feed">
-          {_.map(
-            display_projects,
-            (project, project_idx) =>
+          {_.map(display_projects, (project, project_idx) => {
+            const sourceCodeExists =
+              safePrefix(_.get(project, "sourceCodeLink")) !== "/";
+            const liveAppExists =
+              safePrefix(_.get(project, "liveApplicationLink")) !== "/";
+            return (
               project.title && (
                 <article key={project_idx} className="project">
                   <div className="post-inside">
@@ -45,23 +49,46 @@ export default class Project extends React.Component {
                     <footer className="project-meta">
                       <React.Fragment>
                         <Link
-                          to={safePrefix(_.get(project, "url"))}
-                          className={`button`}
-                        >
-                          Live Application
-                        </Link>
-                        <Link
-                          to={safePrefix(_.get(project, "url"))}
-                          className={`button`}
+                          data-tip={sourceCodeExists ? null : "tool"}
+                          target={sourceCodeExists ? "_blank" : "_self"}
+                          to={
+                            sourceCodeExists
+                              ? _.get(project, "sourceCodeLink")
+                              : "#"
+                          }
+                          className={`button ${
+                            sourceCodeExists ? "" : "disabled"
+                          }`}
                         >
                           Source Code
                         </Link>
+                        <span style={{ borderRight: "1px solid #fff" }}></span>
+                        <Link
+                          data-tip={liveAppExists ? null : "tool"}
+                          target={liveAppExists ? "_blank" : "_self"}
+                          to={
+                            liveAppExists
+                              ? _.get(project, "liveApplicationLink")
+                              : "#"
+                          }
+                          className={`button ${
+                            liveAppExists ? "" : "disabled"
+                          }`}
+                        >
+                          Live Application
+                        </Link>
+                        <ReactTooltip place="bottom" type="dark" effect="solid">
+                          <span style={{ fontSize: "11px" }}>
+                            Not Available
+                          </span>
+                        </ReactTooltip>
                       </React.Fragment>
                     </footer>
                   </div>
                 </article>
               )
-          )}
+            );
+          })}
         </div>
       </Layout>
     );

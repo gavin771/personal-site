@@ -60,17 +60,24 @@
   border: 2px solid _palette(primary) !important;
   text-align: center;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     box-shadow: none !important;
     background: 0 !important;
   }
 }
 
-.project-meta a:nth-child(1) {
-  border-right: 1px solid #fff !important;
+.project-meta a.button.disabled {
+  background: _palette(meta) !important;
+  color: #e2e2e2;
+  border: 2px solid _palette(meta) !important;
 }
-.project-meta a:nth-child(2) {
-  border-left: 1px solid #fff !important;
+.project-meta a.button.disabled:hover {
+  cursor: default;
+  color: #e2e2e2;
+  background: _palette(meta) !important;
+  border: 2px solid _palette(meta) !important;
 }
 
 /* Post feed */
@@ -174,7 +181,7 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1103px) {
   .post-feed,
   .project-feed {
     margin-left: -1.5vw;
@@ -192,7 +199,7 @@
   }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1000px),
+@media only screen and (min-width: 801px) and (max-width: 1103px),
   only screen and (max-width: 600px) {
   .post-feed .post,
   .project-feed .project {
