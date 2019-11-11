@@ -2,7 +2,7 @@ import React from "react";
 import _ from "lodash";
 
 import { Layout } from "../components/index";
-import { Link, safePrefix } from "../utils";
+import { htmlToReact, Link, safePrefix } from "../utils";
 
 export default class Project extends React.Component {
   render() {
@@ -12,6 +12,18 @@ export default class Project extends React.Component {
     );
     return (
       <Layout {...this.props}>
+        <header className="post-header">
+          <h1 className="post-title underline">
+            {_.get(this.props, "pageContext.frontmatter.title")}
+          </h1>
+        </header>
+        {_.get(this.props, "pageContext.frontmatter.subHeading") && (
+          <div className="post-subtitle">
+            {htmlToReact(
+              _.get(this.props, "pageContext.frontmatter.subHeading")
+            )}
+          </div>
+        )}
         <div className="project-feed">
           {_.map(
             display_projects,
