@@ -23,7 +23,7 @@ export default class Body extends React.Component {
           />
           <meta name="google" content="notranslate" />
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
             rel="stylesheet"
           />
           <link rel="stylesheet" href={safePrefix("assets/css/main.css")} />
