@@ -349,4 +349,9 @@
       color: _palette(accent-red);
     }
   }
+
+  .Toastify__close-button {
+    border: none !important;
+    background: transparent !important;
+  }
 }
