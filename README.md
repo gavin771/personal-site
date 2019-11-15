@@ -1,4 +1,5 @@
 # Personal Site
 
 Built with React, Gatsby & Contentful.
-[Live Site](gavinsamuels.com)
+
+[Live Site Available Here](gavinsamuels.com)
