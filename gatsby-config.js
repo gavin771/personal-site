@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: "/",
   siteMetadata: require("./site-metadata.json"),
+  icon: `src/images/favicon.ico`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-source-data`,
