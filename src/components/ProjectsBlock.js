@@ -5,14 +5,7 @@ import { Link, safePrefix } from "../utils";
 
 export default class ProjectsBlock extends React.Component {
   render() {
-    let display_projects = _.get(
-      this.props,
-      "pageContext.site.data.projects.projects"
-    );
-    let recent_projects = display_projects.slice(
-      0,
-      _.get(this.props, "section.num_projects_displayed")
-    );
+    let display_projects = _.get(this.props, "section.projects");
     return (
       <section id={_.get(this.props, "section.section_id")} className="block">
         <h2 className="block-title underline">
@@ -20,7 +13,7 @@ export default class ProjectsBlock extends React.Component {
         </h2>
         <div className="post-feed">
           {_.map(
-            recent_projects,
+            display_projects,
             (project, project_idx) =>
               project.title && (
                 <article key={project_idx} className="post">
