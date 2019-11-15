@@ -109,6 +109,10 @@
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
+    margin-bottom: 0;
+    .post-inside {
+      margin: 30px;
+    }
   }
 
   .post-inside {
