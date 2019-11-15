@@ -1,10 +1,21 @@
 module.exports = {
   pathPrefix: "/",
   siteMetadata: require("./site-metadata.json"),
-  icon: `src/images/favicon.ico`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-source-data`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon-16x16.png`,
+        name: `Gavin Samuels Website`,
+        short_name: `Gavin Samuels`,
+        start_url: `/`,
+        background_color: `#263547`,
+        theme_color: `#e64848`,
+        display: `standalone`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
