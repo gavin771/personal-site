@@ -9,7 +9,7 @@ export default class Project extends React.Component {
   render() {
     let display_projects = _.get(
       this.props,
-      "pageContext.site.data.projects.projects"
+      "pageContext.frontmatter.projects"
     );
     return (
       <Layout {...this.props}>
