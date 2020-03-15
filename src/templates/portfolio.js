@@ -45,11 +45,13 @@ export default class Project extends React.Component {
                     </header>
                     <div className="post-content">
                       <p>{_.get(project, "longDescription")}</p>
-                      {_.get(project, "tags").map((tag, tag_idx) => (
-                        <span key={tag_idx} className="project-tag">
-                          {tag}
-                        </span>
-                      ))}
+                      <div style={{ textAlign: "center" }}>
+                        {_.get(project, "tags").map((tag, tag_idx) => (
+                          <span key={tag_idx} className="project-tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <footer className="project-meta">
                       <React.Fragment>
